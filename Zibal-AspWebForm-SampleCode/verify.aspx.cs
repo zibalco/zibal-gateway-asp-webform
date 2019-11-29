@@ -13,10 +13,10 @@ namespace Zibal_AspWebForm_SampleCode
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string strtrackId = Request.Form["trackId"]; // شماره تراکنش
-            string strOrderId = Request.Form["OrderId"]; // شماره سفارش در سیستم شما
-            string strsuccess = Request.Form["success"]; // موفق بودن یا نبودن تراکنش
-            string url = "https://gateway.zibal.ir/verify"; // آدرس متد وریفای
+            string strtrackId = Request.QueryString["trackId"]; // شماره تراکنش
+            string strOrderId = Request.QueryString["OrderId"]; // شماره سفارش در سیستم شما
+            string strsuccess = Request.QueryString["success"]; // موفق بودن یا نبودن تراکنش
+            string url = "https://gateway.zibal.ir/v1/verify"; // آدرس متد وریفای
             if (strsuccess == "1")
             {
                 result.Text = "تراکنش موفقیت آمیز بود";

@@ -22,7 +22,7 @@ namespace Zibal_AspWebForm_SampleCode
             try
             {
 
-                string url = "https://gateway.zibal.ir/request"; // url
+                string url = "https://gateway.zibal.ir/v1/request"; // url
                 Zibal.makeRequest Request = new Zibal.makeRequest(); // define Request
                 Request.merchant = "zibal"; // String
                 Request.orderId = "1000"; // String
